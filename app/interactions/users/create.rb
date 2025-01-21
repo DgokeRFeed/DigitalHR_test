@@ -1,34 +1,47 @@
 module Users
   class Create < ActiveInteraction::Base
-    hash :params do
-      string :name, :surname, :patronymic, :nationality,
-        :country, :skills, presence: true
-      string :email, presence: true, uniqueness: true
-      string :gender, inclusion: { in: %w[male female] }
+    string :name, :surname, :patronymic, :email,
+      :nationality, :country, :gender, :skills
+    integer :age
+    array :interests
 
-      integer :age, presence: true, comparison: { greater_than: 0, less_than_or_equal_to: 90 }
+    validates(
+      :name,
+      :surname,
+      :patronymic,
+      :email,
+      :age,
+      :gender,
+      :country,
+      :nationality,
+      :interests,
+      :skills,
+      presence: true
+    )
 
-      array :interests, presence: true
-    end
-
-
+    validates :gender, inclusion: { in: %w[male female] }
+    validates :age, comparison: { greater_than: 0, less_than_or_equal_to: 90 }
 
     def execute
-      full_name =
-        [
-          params['surname'],
-          params['name'],
-          params['patronymic']
-        ]
-        .map(&:downcase)
-        .join(' ')
+      full_name = [surname, name, patronymic].map(&:downcase).join(' ')
 
-      user_params = params.except(:interests, :skills).merge(full_name:)
+      user_params = {
+        name:,
+        surname:,
+        patronymic:,
+        full_name:,
+        email:,
+        age:,
+        gender:,
+        country:,
+        nationality:
+      }
+
       user = User.new(user_params)
 
-      user.interests = Interest.where(name: params['interests'])
+      user.interests = Interest.where(name: interests)
 
-      user_skills = params['skills'].split(',')
+      user_skills = skills.split(',')
       user.skills = Skill.where(name: user_skills)
 
       unless user.save

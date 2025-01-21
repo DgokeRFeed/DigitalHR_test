@@ -9,7 +9,7 @@ module Api
 
     # POST /users
     def create
-      outcome = Users::Create.run(params)
+      outcome = Users::Create.run(params.fetch(:user, {}))
 
       if outcome.valid?
         @user = outcome.result
