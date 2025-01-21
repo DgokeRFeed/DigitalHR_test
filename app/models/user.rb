@@ -27,4 +27,6 @@ class User < ApplicationRecord
     :gender,
     presence: true
   )
+
+  validates :email, uniqueness: true
 end

@@ -15,8 +15,22 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_20_161210) do
     t.string "name", null: false
   end
 
+  create_table "interests_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "interest_id"
+    t.index ["interest_id"], name: "index_interests_users_on_interest_id"
+    t.index ["user_id"], name: "index_interests_users_on_user_id"
+  end
+
   create_table "skills", force: :cascade do |t|
     t.string "name", null: false
+  end
+
+  create_table "skills_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "skill_id"
+    t.index ["skill_id"], name: "index_skills_users_on_skill_id"
+    t.index ["user_id"], name: "index_skills_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -29,19 +43,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_20_161210) do
     t.string "nationality", null: false
     t.string "country", null: false
     t.string "gender", null: false
-  end
-
-  create_table "users_interests", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "interest_id"
-    t.index ["interest_id"], name: "index_users_interests_on_interest_id"
-    t.index ["user_id"], name: "index_users_interests_on_user_id"
-  end
-
-  create_table "users_skills", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "skill_id"
-    t.index ["skill_id"], name: "index_users_skills_on_skill_id"
-    t.index ["user_id"], name: "index_users_skills_on_user_id"
   end
 end
