@@ -81,6 +81,7 @@ test:
 production:
   primary: &primary_production
     <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
     database: digitalhr_production
     username: digitalhr
     password: <%= ENV["DIGITALHR_DATABASE_PASSWORD"] %>
