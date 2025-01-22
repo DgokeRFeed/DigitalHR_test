@@ -1,0 +1,64 @@
+{
+  "resources": [
+    {
+      "name": "Interests",
+      "explanation": "Interests resource",
+      "examples": [
+        {
+          "description": "Getting list of interests",
+          "link": "interests/getting_list_of_interests.json",
+          "groups": "all",
+          "route": "/api/interests",
+          "method": "get"
+        },
+        {
+          "description": "Create interest",
+          "link": "interests/create_interest.json",
+          "groups": "all",
+          "route": "/api/interests",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Skills",
+      "explanation": "Skills resource",
+      "examples": [
+        {
+          "description": "Getting list of skills",
+          "link": "skills/getting_list_of_skills.json",
+          "groups": "all",
+          "route": "/api/skills",
+          "method": "get"
+        },
+        {
+          "description": "Create skill",
+          "link": "skills/create_skill.json",
+          "groups": "all",
+          "route": "/api/skills",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "explanation": "Users resource",
+      "examples": [
+        {
+          "description": "Getting list of users",
+          "link": "users/getting_list_of_users.json",
+          "groups": "all",
+          "route": "/api/users",
+          "method": "get"
+        },
+        {
+          "description": "Create user",
+          "link": "users/create_user.json",
+          "groups": "all",
+          "route": "/api/users",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}

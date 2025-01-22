@@ -1,0 +1,117 @@
+{
+  "resource": "Users",
+  "resource_explanation": "Users resource",
+  "http_method": "POST",
+  "route": "/api/users",
+  "description": "Create user",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "name",
+      "description": "Name"
+    },
+    {
+      "name": "surname",
+      "description": "Surname"
+    },
+    {
+      "name": "patronymic",
+      "description": "Patronymic"
+    },
+    {
+      "name": "email",
+      "description": "Email address"
+    },
+    {
+      "name": "age",
+      "description": "Age"
+    },
+    {
+      "name": "country",
+      "description": "Country"
+    },
+    {
+      "name": "nationality",
+      "description": "Nationality"
+    },
+    {
+      "name": "gender",
+      "description": "Gender (`male` or `female`)"
+    },
+    {
+      "name": "interests",
+      "description": "Array of interests"
+    },
+    {
+      "name": "skills",
+      "description": "String of skills"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "name",
+      "description": "Name"
+    },
+    {
+      "name": "surname",
+      "description": "Surname"
+    },
+    {
+      "name": "patronymic",
+      "description": "Patronymic"
+    },
+    {
+      "name": "full_name",
+      "description": "Full name"
+    },
+    {
+      "name": "email",
+      "description": "Email address"
+    },
+    {
+      "name": "age",
+      "description": "Age"
+    },
+    {
+      "name": "country",
+      "description": "Country"
+    },
+    {
+      "name": "nationality",
+      "description": "Nationality"
+    },
+    {
+      "name": "gender",
+      "description": "Gender (`male` or `female`)"
+    },
+    {
+      "name": "interests",
+      "description": "Array of interests"
+    },
+    {
+      "name": "skills",
+      "description": "Array of skills"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/users",
+      "request_body": "{\"user\":{\"name\":\"vladimir\",\"surname\":\"popov\",\"patronymic\":\"dmitrievich\",\"age\":25,\"gender\":\"male\",\"country\":\"russia\",\"nationality\":\"komi\",\"email\":\"shish@shish.com\",\"interests\":[\"music\"],\"skills\":\"backend\"}}",
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"name\": \"vladimir\",\n  \"surname\": \"popov\",\n  \"patronymic\": \"dmitrievich\",\n  \"full_name\": \"popov vladimir dmitrievich\",\n  \"email\": \"shish@shish.com\",\n  \"age\": 25,\n  \"gender\": \"male\",\n  \"country\": \"russia\",\n  \"nationality\": \"komi\",\n  \"interests\": [\n    {\n      \"name\": \"music\"\n    }\n  ],\n  \"skills\": [\n    {\n      \"name\": \"backend\"\n    }\n  ]\n}",
+      "response_headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "resource": "Users",
+  "resource_explanation": "Users resource",
+  "http_method": "GET",
+  "route": "/api/users",
+  "description": "Getting list of users",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "name",
+      "description": "Name"
+    },
+    {
+      "name": "surname",
+      "description": "Surname"
+    },
+    {
+      "name": "patronymic",
+      "description": "Patronymic"
+    },
+    {
+      "name": "full_name",
+      "description": "Full name"
+    },
+    {
+      "name": "email",
+      "description": "Email address"
+    },
+    {
+      "name": "age",
+      "description": "Age"
+    },
+    {
+      "name": "country",
+      "description": "Country"
+    },
+    {
+      "name": "nationality",
+      "description": "Nationality"
+    },
+    {
+      "name": "gender",
+      "description": "Gender (`male` or `female`)"
+    },
+    {
+      "name": "interests",
+      "description": "Array of interests"
+    },
+    {
+      "name": "skills",
+      "description": "Array of skills"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/users",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"name\": \"sergey\",\n    \"surname\": \"chicha\",\n    \"patronymic\": \"vitalyevich\",\n    \"full_name\": \"chicha sergey vitalyevich\",\n    \"email\": \"shish1@shish.lol\",\n    \"age\": 25,\n    \"gender\": \"male\",\n    \"country\": \"tatarstan\",\n    \"nationality\": \"ultratatar\",\n    \"interests\": [\n\n    ],\n    \"skills\": [\n\n    ]\n  }\n]",
+      "response_headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
