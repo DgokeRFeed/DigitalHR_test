@@ -1,24 +1,11 @@
-# README
+# DigitalHRTest
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение, созданное с использованием гема `ActionInteractive`
 
-Things you may want to cover:
+Доступ: https://digitalhrtest-8sag.onrender.com/
 
-* Ruby version
+Если при переходе вы видите `{'hello': 'World!'}`, значит приложение работает
 
-* System dependencies
+Приложение не имеет веб-интерфейса, `POST` запросы выполняются с помощью `Postman`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+API документация доступна по ссылке https://digitalhrtest-8sag.onrender.com/api/docs
