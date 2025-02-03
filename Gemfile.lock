@@ -54,7 +54,7 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    active_interaction (5.4.0)
+    active_interaction (5.5.0)
       activemodel (>= 5.2, < 9)
       activesupport (>= 5.2, < 9)
     activejob (8.0.1)
@@ -115,7 +115,7 @@ GEM
       railties (>= 5.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    i18n (1.14.6)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     io-console (0.8.0)
     irb (1.14.3)
@@ -279,7 +279,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  active_interaction (~> 5.4)
+  active_interaction (~> 5.5)
   annotate
   apitome
   bootsnap

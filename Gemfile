@@ -6,7 +6,7 @@ gem 'puma', '>= 5.0'
 gem 'jbuilder'
 gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
-gem 'active_interaction', '~> 5.4'
+gem 'active_interaction', '~> 5.5'
 gem 'apitome'
 gem 'sprockets-rails'
 gem 'rspec_api_documentation', github: 'SchoolKeep/rspec_api_documentation', ref: '13df1ac'
